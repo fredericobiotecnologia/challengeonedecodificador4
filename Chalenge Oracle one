@@ -1,0 +1,38 @@
+def criptografar(palavra):
+    """
+    Função que criptografa uma palavra com base nas regras dadas.
+    """
+    palavra = palavra.lower()
+    palavra = palavra.replace("e", "enter")
+    palavra = palavra.replace("i", "imes")
+    palavra = palavra.replace("a", "ai")
+    palavra = palavra.replace("o", "ober")
+    palavra = palavra.replace("u", "ufat")
+    return palavra
+
+
+def descriptografar(palavra_criptografada):
+    """
+    Função que descriptografa uma palavra criptografada com base nas regras dadas.
+    """
+    palavra_criptografada = palavra_criptografada.lower()
+    palavra_criptografada = palavra_criptografada.replace("enter", "e")
+    palavra_criptografada = palavra_criptografada.replace("imes", "i")
+    palavra_criptografada = palavra_criptografada.replace("ai", "a")
+    palavra_criptografada = palavra_criptografada.replace("ober", "o")
+    palavra_criptografada = palavra_criptografada.replace("ufat", "u")
+    return palavra_criptografada
+
+
+# Exemplo de uso:
+
+# Palavra original
+palavra_original = "gato"
+
+# Criptografar a palavra
+palavra_criptografada = criptografar(palavra_original)
+print("Palavra criptografada:", palavra_criptografada)
+
+# Descriptografar a palavra
+palavra_descriptografada = descriptografar(palavra_criptografada)
+print("Palavra descriptografada:", palavra_descriptografada)
